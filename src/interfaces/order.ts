@@ -1,8 +1,10 @@
+import { Types } from "mongoose";
+
 export interface Order {
   id: string;
-  userId: string;
+  userId: Types.ObjectId;
   products: {
-    productId: string;
+    productId: Types.ObjectId;
     quantity: number;
   }[];
   status: "pendente" | "em_preparo" | "finalizado" | "cancelado";
